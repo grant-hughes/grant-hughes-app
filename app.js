@@ -1,17 +1,18 @@
 const express = require('express');
 const path = require('path');
-var request = require('request');
-var pipe = require('pipe');
+const request = require('request');
+const pipe = require('pipe');
 
 process.env.PORT = 80;
 
 const app = express();
 
 app.get('/', function(req, res) {
-  res.send('Welcome to Grant Hughes\' site!);
+  res.send('Welcome to Grant Hughes\' site!');
 });
 
 app.use('/nodejs-quickstart', function(req, res) {
+  console.log('yo');
   req.pipe(request('http://localhost:4000' + req.url)).pipe(res);
 });
 

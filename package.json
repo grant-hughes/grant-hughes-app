@@ -18,8 +18,12 @@
   "homepage": "https://github.com/grant-hughes/grant-hughes-app#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "forever": "^0.15.3",
     "path": "^0.12.7",
     "pipe": "^1.1.0",
     "request": "^2.88.0"
+  },
+  "scripts": {
+    "start": "./downloadRepo nodejs-quickstart && forever start app.js && forever start nodejs-quickstart/app.js"
   }
 }
