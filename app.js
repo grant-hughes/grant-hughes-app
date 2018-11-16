@@ -2,9 +2,6 @@ const express = require('express');
 const path = require('path');
 const request = require('request');
 const pipe = require('pipe');
-
-process.env.PORT = 8080;
-
 const app = express();
 
 app.get('/', function(req, res) {
