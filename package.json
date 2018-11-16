@@ -24,6 +24,6 @@
     "request": "^2.88.0"
   },
   "scripts": {
-    "start": "./downloadRepo nodejs-quickstart && forever start nodejs-quickstart/app.js && node app.js"
+    "start": "./downloadRepo nodejs-quickstart && ./downloadRepo chinese-flashcards-generator && forever start nodejs-quickstart/app.js && forever start chinese-flashcards-generator/app.js && node app.js"
   }
 }
